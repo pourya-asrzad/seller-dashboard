@@ -1,8 +1,8 @@
 import ArrowLeft from "@icons/button-icon.svg";
 import TestImage from "@images/test.png";
-import { OrderCard } from "./OrderCard";
+import { OrderCard } from "./ProductCard";
 import { Tab, Tabs } from "@heroui/react";
-const orderData = [
+const productData = [
   {
     category: "کتاب",
     productName: "کتاب طلسم مکالمه ( پکیج ۵ تایی)",
@@ -30,13 +30,13 @@ const orderData = [
     customerName: "محمد حسینی",
   },
 ];
-export const OrderList = () => {
+export const ProductList = () => {
   return (
     <div id="order-list">
       <div className="flex  justify-between items-center mx-6">
-        <h1>لیست سفارشات جاری</h1>
+        <h1>لیست محصولات</h1>
         <div className="flex items-center gap-2">
-          <h2 className="text-primary-700 ">مشاهده همه سفارشات</h2>
+          <h2 className="text-primary-700 ">مشاهده همه محصولات</h2>
           <ArrowLeft />
         </div>
       </div>
@@ -56,17 +56,24 @@ export const OrderList = () => {
         }}
         color="success"
       >
-        <Tab key="waiting-list" title="سفارش های منتظر تایید">
-          <div className="flex flex-col gap-4 mt-4">
-            {orderData.map((order, index) => {
+        <Tab key="confirmed-list" title="تایید شده">
+          <div className="flex gap-4 mt-4">
+            {productData.map((order, index) => {
               return <OrderCard key={index} {...order} />;
             })}
           </div>
         </Tab>
 
-        <Tab key="orders-ready-to-deliver" title=" سفارش های آماده ارسال">
-          <div className="flex flex-col gap-4 mt-4">
-            {orderData.map((order, index) => {
+        <Tab key="waiting-for-admin-confirm" title="در انتظار تایید ادمین ">
+          <div className="flex  gap-4 mt-4">
+            {productData.map((order, index) => {
+              return <OrderCard key={index} {...order} />;
+            })}
+          </div>
+        </Tab>
+        <Tab key="not-confirmed" title="تایید نشده">
+          <div className="flex  gap-4 mt-4">
+            {productData.map((order, index) => {
               return <OrderCard key={index} {...order} />;
             })}
           </div>
