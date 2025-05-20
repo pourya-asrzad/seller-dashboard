@@ -7,3 +7,61 @@
     text-wrap: balance;
   }
 }
+
+.hasToman {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hasToman::after {
+  content: "تومان";
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.effect-1 {
+  position: relative;
+}
+
+.effect-1::after {
+  transition: all 450ms ease;
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 60px;
+  background: #fff;
+  filter: blur(4px);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 110%;
+  z-index: 2;
+}
+
+.effect-1:hover::after {
+  left: -15px;
+}
+
+.effect-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.effect-2::after {
+  transition: all 450ms;
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: #fff;
+  filter: blur(4px);
+  transform: rotate(45deg);
+  top: -10px;
+  left: 88%;
+  z-index: 2;
+}
+
+.effect-2:hover::after {
+  top: 55px;
+  left: -65px;
+}

@@ -32,9 +32,8 @@ export const OrderCard = ({
         </div>
         <div className="flex">
           <span className=" ml-1 text-xs">مبلغ :</span>
-          <p className="text-sm font-medium text-secondary-700">
-            {price}
-            تومان
+          <p className="text-sm font-medium text-secondary-700  hasToman ">
+            {price.toLocaleString()}
           </p>
         </div>{" "}
         <div className="flex">
@@ -73,10 +72,14 @@ export const OrderCard = ({
         </div>
       </div>
       <div className="flex gap-2 w-full justify-end">
-        <Button className=" rounded-md " variant="bordered" color="danger">
+        <Button
+          className=" rounded-md  effect-2"
+          variant="bordered"
+          color="danger"
+        >
           لغو سفارش
         </Button>
-        <Button className="rounded-md bg-primary-600 text-white">
+        <Button className="rounded-md bg-primary-600 effect-1 text-white">
           تایید سفارش
         </Button>
       </div>
