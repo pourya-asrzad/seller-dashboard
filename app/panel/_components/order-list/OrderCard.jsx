@@ -76,7 +76,7 @@ export const OrderCard = ({
         <Button className=" rounded-md " variant="bordered" color="danger">
           لغو سفارش
         </Button>
-        <Button className="rounded-md bg-primary-600" color="primary">
+        <Button className="rounded-md bg-primary-600 text-white">
           تایید سفارش
         </Button>
       </div>
