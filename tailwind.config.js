@@ -3,8 +3,9 @@ const { heroui } = require("@heroui/react");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  safelist: ["bg-primary-600"],
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
@@ -80,6 +81,12 @@ module.exports = {
         xs: "475px",
         ...defaultTheme.screens,
       },
+    },
+  },
+  variants: {
+    extend: {
+      margin: ["rtl"],
+      padding: ["rtl"],
     },
   },
   plugins: [heroui()],
