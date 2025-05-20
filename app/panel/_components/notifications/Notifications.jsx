@@ -27,7 +27,7 @@ const notifData = [
 export const Notifications = () => {
   return (
     <section className="w-72 mx-4  p-2 shadow-md" id="notification">
-      <div className="flex ">
+      <div className="flex gap-2 ">
         <Timer />
         <h2 className="text-xs">اعلانات</h2>
       </div>
