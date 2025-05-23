@@ -15,7 +15,7 @@ const Login = () => {
             <label className="text-sm text-gray-600">تلفن همراه یا ایمیل خود را وارد کنید</label>
             <input
               type="text"
-              placeholder="ایمیل"
+              placeholder="تلفن همراه یا ایمیل"
               className="border border-gray-300 rounded-lg p-2 focus:outline-none w-[28.3125rem] "
             />
           </div>
@@ -28,10 +28,10 @@ const Login = () => {
           text-primary-700 rounded-lg px-4 py-2 hover:bg-primary-700 hover:text-white">
             ارسال کد 
           </Link>
-          <button  className="bg-gray-200 w-[13.375rem] h-[3rem] border-2 border-primary-700  
+          <Link href={'/login/password'}  className="bg-gray-200 w-[13.375rem] h-[3rem] border-2 border-primary-700  
           text-primary-700 rounded-lg px-4 py-2 hover:bg-primary-700 hover:text-white">
             ورودبا رمز عبور
-          </button>
+          </Link>
       </div>
     </div>
     </div>
